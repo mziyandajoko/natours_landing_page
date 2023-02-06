@@ -30,9 +30,18 @@ body{
   margin: 30px;
 }
 
-.logo{
-  width: 6rem;
+.logo_box{
+  position: relative;
 }
+
+.logo{
+  position: absolute;
+  width: 6rem;
+  left: 30px;
+  top: 30px;
+
+}
+
  
 .text_box{
   position: absolute;
