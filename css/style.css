@@ -34,11 +34,12 @@ body{
   width: 6rem;
 }
  
-.heading_wrappper{
+.text_box{
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .primary_heading{
   display: block;
@@ -54,6 +55,7 @@ body{
 
   animation-name: moveInLeft;
   animation-delay: 3s;
+  animation-timing-function:  ease-out;
 }
 
 .primary_heading-sub{
@@ -65,12 +67,32 @@ body{
 
  /* button global styles */
 
- /* .btn{
-
+  .btn:link,
+  .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    font-weight: 400;
+    transition: all .2s; 
  }
 
- .btn--white {}
- .btn--animated {} */
+ .btn:hover{ 
+  transform:  translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+ }
+
+ .btn:active{ 
+  transform:  translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+ }
+ .btn--white {
+  background-color: var(--clr-white);
+  color: #777;
+ }
+ .btn--animated {} 
 
 
  /* Animations:: */
@@ -92,4 +114,18 @@ body{
   }
  }
 
+ @keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0px);
+  }
+ }
 
