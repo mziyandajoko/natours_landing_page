@@ -1,0 +1,55 @@
+.header{
+  background-image: linear-gradient(rgba($clr-light-green, 0.8), rgba($clr-dark-green, 0.8) ), url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0,100% 75vh, 0 100%);
+  margin: 3rem;
+}
+
+.logo_box{
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  width: 6rem;
+  left: 3rem;
+  top: 3rem;
+}
+
+ 
+.text_box{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.primary_heading{
+  display: block;
+  color: var($clr-white);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &-main{
+    display: block;
+  font-size: 6rem;
+  letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft;
+  animation-delay: 3s;
+  animation-timing-function:  ease-out;
+  }
+}
+
+.primary_heading-main{
+  
+}
+
+.primary_heading-sub{
+  font-size: 2rem;
+  letter-spacing: 1.7rem;
+}
+
