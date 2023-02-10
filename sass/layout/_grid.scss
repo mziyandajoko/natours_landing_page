@@ -1,9 +1,29 @@
 .row{
   max-width: $grid-width;
   margin: 0 auto;
-  background-color: #eee;
+  background-color: $clr-dark-grey;
+  color: $clr-black;
 
   &:not(:last-child){
     margin-bottom: $vertical-gutter;
+  }
+
+  @include clearfix;
+
+  // Selects all columns that beggine with [Col]
+  
+  [class^="col-"]{
+    float: left;
+    background-color: red;
+    &:not(last-child){
+     margin-right: $gutter-vertical; 
+    }
+  }
+  .col-1-of-2{
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    
+  }
+  .col-1-of-3{
+    width: calc((100% - #{$gutter-horizontal}) / 3);
   }
 }
